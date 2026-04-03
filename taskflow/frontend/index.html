@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topo">
+      <h1>TaskFlow</h1>
+      <p class="subtitle">Gerenciador de tarefas</p>
+    </header>
+
+    <section class="form-section">
+      <form id="tarefaForm" class="formulario">
+        <input type="text" id="titulo" placeholder="Título da tarefa" required />
+
+        <textarea id="descricao" placeholder="Descrição da tarefa" required></textarea>
+
+        <select id="status" required>
+          <option value="">Selecione o status</option>
+          <option value="PENDENTE">PENDENTE</option>
+          <option value="EM_ANDAMENTO">EM_ANDAMENTO</option>
+          <option value="CONCLUIDA">CONCLUIDA</option>
+        </select>
+
+        <select id="prioridade" required>
+          <option value="">Selecione a prioridade</option>
+          <option value="BAIXA">BAIXA</option>
+          <option value="MEDIA">MEDIA</option>
+          <option value="ALTA">ALTA</option>
+        </select>
+
+        <button type="submit">Cadastrar tarefa</button>
+      </form>
+    </section>
+
+    <section class="lista-section">
+      <div class="lista-header">
+        <h2>Lista de tarefas</h2>
+        <button id="atualizarBtn" class="btn-secundario">Atualizar lista</button>
+      </div>
+
+      <div id="listaTarefas" class="lista-tarefas"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
